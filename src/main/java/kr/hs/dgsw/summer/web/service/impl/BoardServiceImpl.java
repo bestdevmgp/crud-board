@@ -19,7 +19,7 @@ public class BoardServiceImpl implements BoardService {
     public void addPost(Post post) {
         post.setId(++idPool);
 
-        list.add(post);
+        list.addFirst(post);
 
         log.info("List {}", list);
 
