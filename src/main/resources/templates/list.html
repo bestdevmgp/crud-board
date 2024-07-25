@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판</title>
+    <link href="/css/list.css" rel="stylesheet">
+</head>
+<body>
+<h1>게시판</h1>
+<div class="write_btn">
+    <a href="/board/write"><button>글쓰기</button></a>
+</div>
+<table class="list">
+    <thead>
+    <tr>
+        <th>제목</th>
+        <th>글쓴이</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="post : ${list}">
+        <td>
+            <a th:href="@{/board/detail/{id}(id=${post.id})}"><span th:text="${post.title}"></span></a>
+        </td>
+        <td th:text="${post.writer}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

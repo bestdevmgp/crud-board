@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form_area {
+    width: 500px;
+    border: 1px solid #CCC;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.form_area > form > div {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.form_area label {
+    width: 80px;
+    margin-right: 10px;
+    text-align: right;
+    color: #555;
+    font-weight: bold;
+}
+
+.form_area input,
+.form_area textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form_area input:focus,
+.form_area textarea:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
+.form_area textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form_area .button {
+    text-align: center;
+}
+
+.form_area .btn-submit {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form_area .btn-submit:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판</title>
+    <link href="/css/update.css" rel="stylesheet">
+</head>
+<body>
+<h1>수정하기</h1>
+<div class="form_area">
+    <form method="post" action="/board/update.do">
+        <input type="hidden" name="id" th:value="${post.id}">
+        <div>
+            <label>제목</label>
+            <label>
+                <input type="text" name="title" th:value="${post.title}">
+            </label>
+        </div>
+        <div>
+            <label>내용</label>
+            <label>
+                <textarea name="content" th:text="${post.content}"></textarea>
+            </label>
+        </div>
+        <div>
+            <label>글쓴이</label>
+            <label>
+                <input type="text" name="writer" th:value="${post.writer}">
+            </label>
+        </div>
+        <div class="button">
+            <button type="submit">저장</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
