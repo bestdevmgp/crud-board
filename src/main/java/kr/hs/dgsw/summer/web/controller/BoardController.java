@@ -29,6 +29,9 @@ public class BoardController {
             @RequestParam("title") String title,
             @RequestParam("content") String content,
             @RequestParam("writer") String writer) {
+        if (title.isEmpty() || content.isEmpty() || writer.isEmpty()) {
+            return "redirect:/board/write";
+        }
         // 저장
         Post post = Post.builder()
                 .title(title)
@@ -80,6 +83,9 @@ public class BoardController {
             @RequestParam("title") String title,
             @RequestParam("content") String content,
             @RequestParam("writer") String writer) {
+        if (title.isEmpty() || content.isEmpty() || writer.isEmpty()) {
+            return "redirect:/board/update";
+        }
         // 수정
         Post post = Post.builder()
                 .id(id)
