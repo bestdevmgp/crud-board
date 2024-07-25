@@ -2,9 +2,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
 }
@@ -12,13 +12,13 @@ body {
 h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 20px;
 }
 
 .form_area {
     width: 500px;
     border: 1px solid #CCC;
     padding: 20px;
-    margin: 20px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 8px;
@@ -26,21 +26,22 @@ h1 {
 
 .form_area > form > div {
     display: flex;
-    align-items: center;
-    margin: 15px 0;
+    align-items: flex-start;
+    margin-bottom: 15px;
 }
 
 .form_area label {
-    width: 80px;
+    width: 100px;
     margin-right: 10px;
     text-align: right;
     color: #555;
     font-weight: bold;
+    flex-shrink: 0; /* 레이블 크기 고정 */
 }
 
 .form_area input,
 .form_area textarea {
-    flex: 1;
+    flex: 1; /* 남은 공간을 차지 */
     padding: 8px;
     border: 1px solid #CCC;
     border-radius: 4px;
@@ -56,14 +57,15 @@ h1 {
 
 .form_area textarea {
     height: 100px;
-    resize: vertical;
+    resize: vertical; /* 수직으로 크기 조절 가능 */
 }
 
 .form_area .button {
     text-align: center;
+    margin-top: 20px;
 }
 
-.form_area .btn-submit {
+.form_area .button button {
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
@@ -74,6 +76,6 @@ h1 {
     transition: background-color 0.3s;
 }
 
-.form_area .btn-submit:hover {
+.form_area .button button:hover {
     background-color: #0056b3;
 }
