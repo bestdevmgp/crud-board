@@ -79,7 +79,6 @@ public class BoardController {
 
     @PostMapping("/board/update.do")
     public String updateDo(
-            @RequestParam("id") int id,
             @RequestParam("title") String title,
             @RequestParam("content") String content,
             @RequestParam("writer") String writer) {
@@ -88,11 +87,11 @@ public class BoardController {
         }
         // 수정
         Post post = Post.builder()
-                .id(id)
                 .title(title)
                 .content(content)
                 .writer(writer)
                 .build();
+
         log.info("Update {}", post);
 
         boardService.update(post);
