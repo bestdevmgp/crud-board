@@ -36,12 +36,12 @@ h1 {
     text-align: right;
     color: #555;
     font-weight: bold;
-    flex-shrink: 0; /* 레이블 크기 고정 */
+    flex-shrink: 0;
 }
 
 .form_area input,
 .form_area textarea {
-    flex: 1; /* 남은 공간을 차지 */
+    flex: 1;
     padding: 8px;
     border: 1px solid #CCC;
     border-radius: 4px;
@@ -57,7 +57,7 @@ h1 {
 
 .form_area textarea {
     height: 100px;
-    resize: vertical; /* 수직으로 크기 조절 가능 */
+    resize: vertical;
 }
 
 .form_area .button {
